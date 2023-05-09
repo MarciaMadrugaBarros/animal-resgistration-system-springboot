@@ -26,9 +26,9 @@ public abstract class Animal{
 		return weight;
 	}
 
-	public abstract String eat();
+	public abstract void eat();
 		
-	public abstract String makeSound();
+	public abstract void makeSound();
 		
 	}
 	

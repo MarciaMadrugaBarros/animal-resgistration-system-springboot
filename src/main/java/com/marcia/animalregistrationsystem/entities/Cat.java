@@ -1,6 +1,6 @@
 package com.marcia.animalregistrationsystem.entities;
 
-import com.marcia.animalregistrationsystem.services.DomesticAnimal;
+import com.marcia.animalregistrationsystem.interfaces.DomesticAnimal;
 
 public class Cat extends Animal implements DomesticAnimal {
 
@@ -10,9 +10,9 @@ public class Cat extends Animal implements DomesticAnimal {
 	
 	public Cat() {
 	}
-	
-	public Cat(String catEat, String catMakeSound, Boolean vaccine) {
-		super();
+
+	public Cat(String name, Double weight, String catEat, String catMakeSound, Boolean vaccine) {
+		super(name, weight);
 		this.catEat = catEat;
 		this.catMakeSound = catMakeSound;
 		this.vaccine = vaccine;
@@ -34,19 +34,19 @@ public class Cat extends Animal implements DomesticAnimal {
 		this.vaccine = vaccine;
 	}
 	
-	public 	String play() {
-		return "simulando caçada";
+	public 	void play() {
+		System.out.println("simulando caçada");
 	}
 
 	@Override
-	public String eat() {
-		return catEat = "PORTION FOR CAR";
+	public void eat() {
+		System.out.println("PORTION FOR CAR");
 		
 	}
 
 	@Override
-	public String makeSound() {
-		return catMakeSound = "MIAU, MIAU, MIAU";
+	public void makeSound() {
+		System.out.println("MIAU, MIAU, MIAU");
 		
 	}
 

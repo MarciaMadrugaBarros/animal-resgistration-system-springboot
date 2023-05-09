@@ -8,12 +8,11 @@ public class Bird extends Animal{
 	public Bird() {
 	}
 	
-	public Bird(String birdEat, String bidMakeSound) {
-		super();
+	public Bird(String name, Double weight, String birdEat, String birdMakeSound) {
+		super(name, weight);
 		this.birdEat = birdEat;
-		this.birdMakeSound = bidMakeSound;
+		this.birdMakeSound = birdMakeSound;
 	}
-
 
 	public String getBirdEat() {
 		return birdEat;
@@ -24,14 +23,14 @@ public class Bird extends Animal{
 	}
 
 	@Override
-	public String eat() {
-		return birdEat = "BIRDSEED, SUNFLOWER";
+	public void eat() {
+		System.out.println("BIRDSEED, SUNFLOWER");
 		
 	}
 
 	@Override
-	public String makeSound() {
-		return birdMakeSound = "PIU, PIU, PIUU";
+	public void makeSound() {
+		System.out.println("PIU, PIU, PIUU");
 		
 	}
 

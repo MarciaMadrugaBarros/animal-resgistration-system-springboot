@@ -8,8 +8,9 @@ public class Lizard extends Animal{
 	public Lizard() {
 	}
 	
-	public Lizard(String lizardEat, String lizardMakeSound) {
-		super();
+	
+	public Lizard(String name, Double weight, String lizardEat, String lizardMakeSound) {
+		super(name, weight);
 		this.lizardEat = lizardEat;
 		this.lizardMakeSound = lizardMakeSound;
 	}
@@ -23,15 +24,13 @@ public class Lizard extends Animal{
 	}
 
 	@Override
-	public String eat() {
-		return lizardEat = "SHEETS, FRUITS, EGGS";
-		
+	public void eat() {
+		System.out.println("SHEETS, FRUITS, EGGS");
 	}
 
 	@Override
-	public String makeSound() {
-		return lizardMakeSound = "CRRRIII, CRRRIII, CRRRIII";
-		
+	public void makeSound() {
+		System.out.println("CRRRIII, CRRRIII, CRRRIII");
 	}
 
 }

@@ -1,7 +1,7 @@
 package com.marcia.animalregistrationsystem.entities;
 
 import com.marcia.animalregistrationsystem.enums.Toys;
-import com.marcia.animalregistrationsystem.services.DomesticAnimal;
+import com.marcia.animalregistrationsystem.interfaces.DomesticAnimal;
 
 public class Dog extends Animal implements DomesticAnimal {
 	
@@ -13,7 +13,7 @@ public class Dog extends Animal implements DomesticAnimal {
 	public Dog() {
 	}
 	
-	public Dog(String dogEat, String dogMakeSound, Toys toys) {
+	public Dog(Animal animal, String dogEat, String dogMakeSound, Toys toys) {
 		super();
 		this.dogEat = dogEat;
 		this.dogMakeSound = dogMakeSound;
@@ -42,19 +42,19 @@ public class Dog extends Animal implements DomesticAnimal {
 		this.toys = toys;
 	}
 	
-	public 	String play() {
-		return "correndo atrás da bolinha";
+	public 	void play() {
+		System.out.println("correndo atrás da bolinha");
 	}
 
 	@Override
-	public String eat() {
-		return dogEat = "PORTION";
+	public void eat() {
+		System.out.println("PORTION");
 		
 	}
 
 	@Override
-	public String makeSound() {
-		return dogMakeSound = "AU, AU, AU";
+	public void makeSound() {
+		System.out.println("AU, AU, AU");
 		
 	}
 	

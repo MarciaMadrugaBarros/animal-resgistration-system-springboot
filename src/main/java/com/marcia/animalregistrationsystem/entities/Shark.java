@@ -12,12 +12,13 @@ public class Shark extends Animal{
 	public Shark() {
 	}
 	
-	public Shark(String sharkeat, String sharkMakeSound) {
-		super();
+	public Shark(String name, Double weight, String sharkeat, String sharkMakeSound, SharkFood sharkfood) {
+		super(name, weight);
 		this.sharkeat = sharkeat;
 		this.sharkMakeSound = sharkMakeSound;
+		this.sharkfood = sharkfood;
 	}
-	
+
 	public String getSharkeat() {
 		return sharkeat;
 	}
@@ -31,15 +32,14 @@ public class Shark extends Animal{
 	}
 
 	@Override
-	public String eat() {
-		return sharkeat = "FHISH, CRUSTACEAN, CEPHALOPOD";
+	public void eat() {
+		System.out.println("FHISH, CRUSTACEAN, CEPHALOPOD");
 		
 	}
 
 	@Override
-	public String makeSound() {
-		return sharkMakeSound = "FRHH, FRHH, FRHH";
-		
+	public void makeSound() {
+		System.out.println("FRHH, FRHH, FRHH");
 	}
 
 }
