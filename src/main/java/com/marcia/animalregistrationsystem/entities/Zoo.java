@@ -1,29 +1,35 @@
 package com.marcia.animalregistrationsystem.entities;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class Zoo {
+	
+	public static List<Animal> animal = new ArrayList<>();
 
-	public void addAnimal(Animal animal) {
+	public static List<Animal> getAnimail(){
+		return animal;
+	}
+	
+	//Adicionar os animais
+	public static void addAnimal(Animal a) {
+		animal.add(a);
+	}
 		
-				//HashSet, que é a implementação mais rapida
-				Set<String> set = new HashSet<>();
-				
-				//Adiciona os animais
-				set.add("Dog");
-				set.add("Cat");
-				set.add("Bird");
-				set.add("Lizard");
-				set.add("Shark");
+	//Remove os animais
+	public static void deleteAnimal(Animal a) {
+			animal.remove(a);
+	}
+	
+	//Imprime na tela os animais adicionados
+	static public String listAnimals() {
 		
-				//Remove os animais
-				set.remove("Bird");
-				set.remove("Lizard");
-				
-				//Imprime na tela os animais adicionados
-				for (String p : set) {
-					System.out.println(p);
-					}
+			String saida ="";		
+			for (Animal p : animal) {
+			saida +=p.toString();
+				System.out.println(p);
+				}
+				return saida;
 	}
 }
