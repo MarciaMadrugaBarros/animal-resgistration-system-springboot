@@ -1,5 +1,7 @@
 package com.marcia.animalregistrationsystem.entities;
 
+import java.util.UUID;
+
 public class Bird extends Animal{
 
 	private String birdEat;
@@ -8,8 +10,8 @@ public class Bird extends Animal{
 	public Bird() {
 	}
 	
-	public Bird(String name, Double weight, String birdEat, String birdMakeSound) {
-		super(name, weight);
+	public Bird(UUID id, String name, Double weight, String birdEat, String birdMakeSound) {
+		super(id, name, weight);
 		this.birdEat = birdEat;
 		this.birdMakeSound = birdMakeSound;
 	}

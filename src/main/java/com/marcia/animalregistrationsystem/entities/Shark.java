@@ -1,5 +1,7 @@
 package com.marcia.animalregistrationsystem.entities;
 
+import java.util.UUID;
+
 import com.marcia.animalregistrationsystem.enums.SharkFood;
 
 public class Shark extends Animal{
@@ -12,8 +14,8 @@ public class Shark extends Animal{
 	public Shark() {
 	}
 	
-	public Shark(String name, Double weight, String sharkeat, String sharkMakeSound, SharkFood sharkfood) {
-		super(name, weight);
+	public Shark(UUID id, String name, Double weight, String sharkeat, String sharkMakeSound, SharkFood sharkfood) {
+		super(id, name, weight);
 		this.sharkeat = sharkeat;
 		this.sharkMakeSound = sharkMakeSound;
 		this.sharkfood = sharkfood;

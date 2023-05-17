@@ -1,5 +1,7 @@
 package com.marcia.animalregistrationsystem.entities;
 
+import java.util.UUID;
+
 public class Lizard extends Animal{
 
 	private String lizardEat;
@@ -9,8 +11,9 @@ public class Lizard extends Animal{
 	}
 	
 	
-	public Lizard(String name, Double weight, String lizardEat, String lizardMakeSound) {
-		super(name, weight);
+	
+	public Lizard(UUID id, String name, Double weight, String lizardEat, String lizardMakeSound) {
+		super(id, name, weight);
 		this.lizardEat = lizardEat;
 		this.lizardMakeSound = lizardMakeSound;
 	}
@@ -22,6 +25,7 @@ public class Lizard extends Animal{
 	public String getLizardMakeSound() {
 		return lizardMakeSound;
 	}
+
 
 	@Override
 	public void eat() {

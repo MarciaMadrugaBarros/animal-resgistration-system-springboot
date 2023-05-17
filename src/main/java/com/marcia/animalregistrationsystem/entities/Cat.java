@@ -1,5 +1,7 @@
 package com.marcia.animalregistrationsystem.entities;
 
+import java.util.UUID;
+
 import com.marcia.animalregistrationsystem.interfaces.DomesticAnimal;
 
 public class Cat extends Animal implements DomesticAnimal {
@@ -11,8 +13,8 @@ public class Cat extends Animal implements DomesticAnimal {
 	public Cat() {
 	}
 
-	public Cat(String name, Double weight, String catEat, String catMakeSound, Boolean vaccine) {
-		super(name, weight);
+	public Cat(UUID id, String name, Double weight, String catEat, String catMakeSound, Boolean vaccine) {
+		super(id, name, weight);
 		this.catEat = catEat;
 		this.catMakeSound = catMakeSound;
 		this.vaccine = vaccine;
