@@ -3,7 +3,11 @@ package com.marcia.animalregistrationsystem.entities;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "tb_zoo")
 public class Zoo {
 	
 	public static List<Animal> animal = new ArrayList<>();
@@ -23,7 +27,7 @@ public class Zoo {
 	}
 	
 	//Imprime na tela os animais adicionados
-	static public String listAnimals() {
+	/*static public String listAnimals() {
 		
 			String saida ="";		
 			for (Animal p : animal) {
@@ -31,5 +35,5 @@ public class Zoo {
 				System.out.println(p);
 				}
 				return saida;
-	}
+	}*/
 }

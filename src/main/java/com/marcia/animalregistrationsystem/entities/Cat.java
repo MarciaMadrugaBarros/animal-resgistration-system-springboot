@@ -2,8 +2,13 @@ package com.marcia.animalregistrationsystem.entities;
 
 import java.util.UUID;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 import com.marcia.animalregistrationsystem.interfaces.DomesticAnimal;
 
+@Entity
+@Table(name = "tb_cat")
 public class Cat extends Animal implements DomesticAnimal {
 
 	private String catEat;

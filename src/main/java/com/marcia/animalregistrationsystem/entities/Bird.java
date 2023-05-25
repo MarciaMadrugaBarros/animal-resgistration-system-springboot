@@ -2,6 +2,11 @@ package com.marcia.animalregistrationsystem.entities;
 
 import java.util.UUID;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tb_bird")
 public class Bird extends Animal{
 
 	private String birdEat;

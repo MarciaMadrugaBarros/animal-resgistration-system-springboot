@@ -2,8 +2,13 @@ package com.marcia.animalregistrationsystem.entities;
 
 import java.util.UUID;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 import com.marcia.animalregistrationsystem.enums.SharkFood;
 
+@Entity
+@Table(name = "tb_shark")
 public class Shark extends Animal{
 	
 	private String sharkeat;

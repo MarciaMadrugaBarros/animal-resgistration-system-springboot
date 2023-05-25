@@ -1,8 +1,13 @@
 package com.marcia.animalregistrationsystem.entities;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 import com.marcia.animalregistrationsystem.enums.Toys;
 import com.marcia.animalregistrationsystem.interfaces.DomesticAnimal;
 
+@Entity
+@Table(name = "tb_dog")
 public class Dog extends Animal implements DomesticAnimal {
 	
 	private String dogEat;
