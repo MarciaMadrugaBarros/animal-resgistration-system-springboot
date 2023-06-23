@@ -27,13 +27,6 @@ public class Zoo {
 	}
 	
 	//Imprime na tela os animais adicionados
-	/*static public String listAnimals() {
-		
-			String saida ="";		
-			for (Animal p : animal) {
-			saida +=p.toString();
-				System.out.println(p);
-				}
-				return saida;
+	
 	}*/
 }
