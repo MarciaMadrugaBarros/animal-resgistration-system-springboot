@@ -1,58 +1,51 @@
 package com.marcia.animalregistrationsystem.services;
 
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.marcia.animalregistrationsystem.entities.Animal;
-import com.marcia.animalregistrationsystem.repositories.AnimalRepository;
 
-public class AnimalService{
-			
+@RestController
+@RequestMapping(value = "/animais")
+public interface AnimalService{
 
-	@Autowired
-	private AnimalRepository repository;
 	
-	public Animal create(Animal animal) {
-		return repository.save(animal);
-	}
+	List<Animal> animal = new ArrayList<>();
 	
-	public List<Animal> findAll() {
-		return repository.findAll();
-	}
+	List<Animal> getAnimail();
 
-	public Animal findById(UUID id) {
-		Optional<Animal> obj = repository.findById(id);
-		return obj.get();
-	}
+	public List<Animal> findAll();
 	
-	public Animal insert(Animal obj) {
-		return repository.save(obj);
-	}
 	
-	public void delete(UUID id) {
-			repository.deleteById(id);
-	}
+	public Animal findById(UUID id);
 	
-	public Animal update(UUID id, Animal obj) {
-		Animal entity = repository.getReferenceById(id);
-		updateData(entity, obj);
-		return repository.save(entity);
 	
-	}
+	public Animal create(Animal animal);
 	
-	private void updateData(Animal entity, Animal obj) {
-		entity.setName(obj.getName());
-		entity.setWeight(obj.getWeight());
+		
+	public Animal insert(Animal obj);
+	
+	
+	public void delete(UUID id);
+	
+	
+	public Animal update(UUID id, Animal obj);
+	
 	
 	}
 	
-	public static List<Animal> animal = new ArrayList<>();
 	
-	public static List<Animal> getAnimail(){
-		return animal;
-}
-		}
